@@ -1,15 +1,12 @@
 # vue-ts-cli
 
-## 修复改变iview主题问题 yarn add less@^2.7.3 
+## 修复改变iview主题问题 yarn add less@^2.7.3 -dev
 
-## 预览图片 
-this.$root.$viewImg(url)
+## 全局函数 
+$fn 请参考[文档](https://github.com/Javison666/jj-browser-fn)
 
 ## 引入主题色
 @import "@/assets/style/global/_color.scss";
-
-## 金额
-$fn.showMoney(num)
 
 ## Project setup
 ```
