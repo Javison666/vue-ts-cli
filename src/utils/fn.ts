@@ -1,7 +1,5 @@
 import Fn from 'jj-browser-fn/main.js';
 
-
-
 class ProjFn {
 
 }
