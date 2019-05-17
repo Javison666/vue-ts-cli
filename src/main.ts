@@ -10,6 +10,9 @@ import '@/assets/style/iview/theme.less';
 // 自定义全局样式
 import '_style/global/index.scss';
 
+import PAGE_API from '@/apis/pageApi';
+import HTTP_API from '@/apis/httpApi';
+
 import iView from 'iview';
 import fn from '@/utils/fn.ts';
 
@@ -20,6 +23,8 @@ Vue.use(iView, {
 });
 // prop全局
 Vue.prototype.$fn = fn;
+Vue.prototype.$PAGE_API = PAGE_API
+Vue.prototype.$HTTP_API = HTTP_API
 
 Vue.config.productionTip = false;
 
