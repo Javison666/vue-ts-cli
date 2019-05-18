@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import App from './App.vue';
-import router from './router';
+import router from './router/index';
 import store from './store/index';
 
 // 进度条
@@ -28,7 +28,7 @@ Vue.prototype.$HTTP_API = HTTP_API
 
 Vue.config.productionTip = false;
 
-new Vue({
+window.App = new Vue({
 	router,
 	store,
 	render: (h) => h(App),

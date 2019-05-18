@@ -1,3 +1,4 @@
+import $fn from '@/utils/fn';
 import {
 	getUserInfo,
 	getMenu,
@@ -25,12 +26,18 @@ export default {
 		},
 	},
 	actions: {
+		async authInfo({
+            commit,
+        // tslint:disable-next-line:align
+        }, info) {
+            commit('setInfo', info)
+        },
 		async updateMenu({
 			commit,
 		}) {
 			const res = await getMenu()
-			if (res.code !== 200) {
-				(window as any).App.$Message.error(res.msg)
+			if ($fn.n(res.code) !== 200) {
+				window.App.$Message.error(res.msg)
 			} else {
 				commit('setMenu', res.data)
 			}
@@ -42,18 +49,18 @@ export default {
 		}) {
 			try {
 				const res = await getUserInfo()
-				if (res.code === 200) {
+				if ($fn.n(res.code) === 200) {
 					commit('setInfo', res.data)
 				} else {
 					if (window.location.href.indexOf('/login') === -1) {
-						(window as any).App.$router.push({
+						window.App.$router.push({
 							path: '/login',
 						})
 					}
 				}
 			} catch (err) {
 				if (window.location.href.indexOf('/login') === -1) {
-					(window as any).App.$router.push({
+					window.App.$router.push({
 						path: '/login',
 					})
 				}
