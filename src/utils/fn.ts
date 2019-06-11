@@ -1,14 +1,14 @@
-import Fn from 'jj-browser-fn/main.js';
+import Fn from 'jj-browser-fn';
 
-class ProjFn {
+const ProjFn={
     // 跳转路由
-    public toRoute(route: string) {
+    toRoute(route:string): void {
         window.App.$router.push({
             path: route,
         })
-    }
+    },
     // 添加全局公共方法
-    public checkResponse(res: any, fn: any) {
+    checkResponse(res:any): void {
         return new Promise((resolve) => {
             if (res && res.code === 200) {
                 resolve(res.data)
@@ -20,12 +20,7 @@ class ProjFn {
         })
     }
 }
-
-(ProjFn.prototype as any).__proto__ = Fn.prototype
-
-const projFn = new ProjFn() as any;
-// 初始化请求拦截
-projFn.setRequestTestFn((data) => {
+ProjFn.setRequestTestFn = ((data:any): void => {
     try {
         if (data.code === 80001) {
             if (window.location.href.indexOf('/login') === -1) {
@@ -37,7 +32,6 @@ projFn.setRequestTestFn((data) => {
         console.log(err)
     }
 })
-
-export default projFn as any
+export default ProjFn
 
 
