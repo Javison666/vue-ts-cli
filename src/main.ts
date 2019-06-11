@@ -16,6 +16,12 @@ import HTTP_API from '@/apis/httpApi';
 import iView from 'iview';
 import fn from '@/utils/fn.ts';
 
+Component.registerHooks([
+	'beforeRouteEnter',	// 进入路由之前
+	'beforeRouteLeave',	// 离开路由之前
+	'beforeRouteUpdate'
+])
+
 // iview全局使用
 Vue.use(iView, {
 	transfer: true,
