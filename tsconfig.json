@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "esnext",
-	"module": "esnext",
-	"noImplicitAny": false,
+    "module": "esnext",
+    "noImplicitAny": false,
     "strict": true,
     "jsx": "preserve",
     "importHelpers": true,
@@ -18,6 +18,12 @@
     "paths": {
       "@/*": [
         "src/*"
+      ],
+      "_sc/*": [
+        "src/service/components/*"
+      ],
+      "_c/*": [
+        "src/components/*"
       ]
     },
     "lib": [

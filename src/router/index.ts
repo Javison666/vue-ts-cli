@@ -5,7 +5,7 @@ import NProgress from 'nprogress'
 import $fn from '@/utils/fn';
 
 import {
-    getUserInfo,
+	getUserInfo
 } from '@/req/user'
 
 Vue.use(Router);
@@ -19,17 +19,6 @@ const router = new Router({
 router.afterEach((to, from) => {
 	NProgress.done();
 	window.scrollTo(0, 0)
-	// 刷新侧边栏
-	// if (to.path && to.path.indexOf('/home') > -1) {
-	// 	try {
-	// 		window.App.$nextTick(() => {
-	// 			window.refreshSiderMenu()
-	// 		})
-	// 	} catch (err) {
-	// 		// tslint:disable-next-line:no-console
-	// 		console.log(err)
-	// 	}
-	// }
 })
 
 router.beforeEach(async (to, from, next) => {
@@ -41,20 +30,16 @@ router.beforeEach(async (to, from, next) => {
 			// 登录权限校验
 			if (auth === 1) {
 				try {
-                    const res = await getUserInfo()
-                    if ($fn.n(res.code) !== 200) {
-						return next('/login')
+					const res = await getUserInfo()
+					if ($fn.n(res.code) !== 200) {
+						return next('/')
 					} else {
-						await window.App.$store.dispatch('user/authInfo', res.data)
-						// 若菜单从后台获取
-						// if (window.App.$store.state.user.menu.length === 0) {
-						// 	await window.App.$store.dispatch('user/updateMenu')
-						// }
+						window.App.$store.dispatch('user/udtInfoData', res.data)
 					}
 				} catch (err) {
-                    // tslint:disable-next-line:no-console
-                    console.log(err)
-                    return next('/login')
+					// tslint:disable-next-line:no-console
+					console.log(err)
+					return next('/')
 				}
 			}
 		}

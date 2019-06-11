@@ -19,7 +19,7 @@ module.exports = {
     publicPath: BASE_URL,
 
     // 打包路径配置
-    outputDir: 'dist',
+    outputDir: 'dist/main',
 
     // tweak internal webpack configuration.
     // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
@@ -37,14 +37,14 @@ module.exports = {
     // productionSourceMap: false
     // 这里写你调用接口的基础路径，来解决跨域，如果设置了代理，那你本地开发环境的axios的baseUrl要写为 '' ，即空字符串
     devServer: {
-        port: 7201,
+        port: 7001,
         proxy: {
             '/api': {
                 target: 'http://127.0.0.1:8082',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/api': '/app/mock/16/api',
+                    '^/api': '/app/mock/17/api',
                 },
             },
         },

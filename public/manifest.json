@@ -1,0 +1,33 @@
+{
+    "short_name": "吉吉",
+    "name": "会做药的Coder",
+    "icons": [
+        {
+            "src": "/static/img/icon/headicon_57.png",
+            "type": "image/png",
+            "sizes": "57x57"
+        },
+        {
+            "src": "/static/img/icon/headicon_72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "/static/img/icon/headicon_96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/static/img/icon/headicon_120.png",
+            "type": "image/png",
+            "sizes": "120x120"
+        },
+        {
+            "src": "/static/img/icon/headicon.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        }
+    ],
+    "start_url": "/",
+    "display":"standalone"
+}

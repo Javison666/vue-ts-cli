@@ -9,11 +9,11 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "iview": "^3.4.1",
-    "jj-browser-fn": "^1.0.20",
+    "jj-browser-fn": "^2.0.2",
     "nprogress": "^0.2.0",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
+    "vue-m-message": "^1.1.1",
     "vue-property-decorator": "^8.1.0",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
@@ -22,8 +22,6 @@
     "@vue/cli-plugin-babel": "^3.7.0",
     "@vue/cli-plugin-typescript": "^3.7.0",
     "@vue/cli-service": "^3.7.0",
-    "less": "^2.7.3",
-    "less-loader": "^5.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
     "typescript": "^3.4.3",
