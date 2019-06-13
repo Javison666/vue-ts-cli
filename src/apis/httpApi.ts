@@ -1,29 +1,13 @@
-const baseUrl = `api`
+const baseUrl = `/api`
 export default {
 	user: {
-		isLogin: `/${baseUrl}/login/isLogin`,
-		login: `/${baseUrl}/user/login`,
-		logout: `/${baseUrl}/logout`,
-		getInfo: `/${baseUrl}/user/getInfo`
+		// 登录
+		login: `${baseUrl}/user/login`,
+		// 登出
+		logout: `${baseUrl}/user/logout`,
+		// 获取用户信息
+		getInfo: `${baseUrl}/user/getUserInfo`,
+		// 获取菜单
+		getMenu: `${baseUrl}/user/getMenu`,
 	},
-	edc: {
-		auth: `/${baseUrl}/edc/shr1210/auth`
-	},
-	crc: {
-		login: `/${baseUrl}/crc/login`,
-		getUser: `/${baseUrl}/crc/getUser`,
-		getCheck: `/${baseUrl}/crc/getCheck`,
-		getTest: `/${baseUrl}/crc/getTest`,
-		getTestList: `/${baseUrl}/crc/getTestList`,
-	},
-	webCollection: {
-		getData: `/${baseUrl}/webCollection/getData`,
-		addClass: `/${baseUrl}/webCollection/addClass`,
-		delClass: `/${baseUrl}/webCollection/delClass`,
-		addItem: `/${baseUrl}/webCollection/addItem`,
-		delItem: `/${baseUrl}/webCollection/delItem`,
-	},
-	public: {
-		getNpmStat: `/${baseUrl}/public/npmStat`
-	}
 }
