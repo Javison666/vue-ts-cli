@@ -14,6 +14,7 @@ import HTTP_API from '@/apis/httpApi';
 import fn from '@/utils/fn.ts';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Message from 'vue-m-message'
 import JModal from '_c/modal/index.js'
 import JButton from '_c/button/default.vue'
@@ -21,6 +22,8 @@ import JButton from '_c/button/default.vue'
 import Component from 'vue-class-component'
 Vue.config.productionTip = false;
 
+=======
+>>>>>>> parent of 225ac32... Update main.ts
 =======
 >>>>>>> parent of 225ac32... Update main.ts
 Component.registerHooks([
