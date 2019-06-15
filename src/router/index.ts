@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import routes from './router'
 import NProgress from 'nprogress'
 import $fn from '@/utils/fn';
+import PageApi from '@/apis/pageApi'
 
 import {
     getUserInfo,
@@ -19,17 +20,6 @@ const router = new Router({
 router.afterEach((to, from) => {
 	NProgress.done();
 	window.scrollTo(0, 0)
-	// 刷新侧边栏
-	// if (to.path && to.path.indexOf('/home') > -1) {
-	// 	try {
-	// 		window.App.$nextTick(() => {
-	// 			window.refreshSiderMenu()
-	// 		})
-	// 	} catch (err) {
-	// 		// tslint:disable-next-line:no-console
-	// 		console.log(err)
-	// 	}
-	// }
 })
 
 router.beforeEach(async (to, from, next) => {
@@ -43,7 +33,7 @@ router.beforeEach(async (to, from, next) => {
 				try {
                     const res = await getUserInfo()
                     if ($fn.n(res.code) !== 200) {
-						return next('/login')
+						return next(PageApi.login.path)
 					} else {
 						await window.App.$store.dispatch('user/authInfo', res.data)
 						// 若菜单从后台获取
@@ -54,7 +44,7 @@ router.beforeEach(async (to, from, next) => {
 				} catch (err) {
                     // tslint:disable-next-line:no-console
                     console.log(err)
-                    return next('/login')
+                    return next(PageApi.login.path)
 				}
 			}
 		}

@@ -3,7 +3,9 @@
         <div class="login-bg"></div>
         <div class="login-default">
             <div class="row">
-                <h2 style="color:#fff;text-shadow:0 0 8px #000;">web基础平台</h2>
+                <h2 style="color:#fff;text-shadow:0 0 8px #000;">
+                    web基础平台
+                </h2>
             </div>
             <div class="row">
                 <Input
@@ -13,7 +15,7 @@
                     style="width:280px;"
                     placeholder="请输入账号"
                 >
-                    <Icon type="ios-contact" :size="22" slot="prefix"/>
+                    <Icon type="ios-contact" :size="22" slot="prefix" />
                 </Input>
             </div>
             <div class="row">
@@ -24,7 +26,7 @@
                     style="width:280px;"
                     placeholder="请输入密码"
                 >
-                    <Icon type="ios-key" :size="20" slot="prefix"/>
+                    <Icon type="ios-key" :size="20" slot="prefix" />
                 </Input>
             </div>
             <div class="row">
@@ -39,7 +41,7 @@
                     style="cursor:pointer;height:36px;width:114px;display:inline-block;vertical-align:middle;margin-left:10px;"
                     @click="updateImgCode"
                     alt="图形验证码"
-                >
+                />
             </div>
             <!-- <div class="row" v-show="isNeedSms">
                 <Input
@@ -55,16 +57,30 @@
                 </div>
             </div> -->
             <div style="min-height:30px;padding-left:30px;padding-right:30px;">
-                <p style="text-align:left;" class="wrong" ref="wrong" v-show="wrong">{{wrong}}</p>
+                <p
+                    style="text-align:left;"
+                    class="wrong"
+                    ref="wrong"
+                    v-show="wrong"
+                >
+                    {{ wrong }}
+                </p>
                 <p
                     style="text-align:left;"
                     class="success"
                     ref="success"
                     v-show="success"
-                >{{success}}</p>
+                >
+                    {{ success }}
+                </p>
             </div>
             <div>
-                <Button type="primary" style="width:240px;margin-top:10px;" @click="toLogin">登录</Button>
+                <Button
+                    type="primary"
+                    style="width:240px;margin-top:10px;"
+                    @click="toLogin"
+                    >登录</Button
+                >
             </div>
         </div>
     </div>
@@ -72,11 +88,9 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import {
-    login,
-} from "@/req/user";
+import { login } from "@/req/user";
 
-@Component({})
+@Component
 export default class Home extends Vue {
     public username = "";
     public password = "";
@@ -114,12 +128,14 @@ export default class Home extends Vue {
     // }
     // public getSmsCode() {}
     public async toLogin() {
-        await login({
-            username: this.username,
-            password: encodeURIComponent(this.password),
-            imageCode: this.imageCode,
-            smsCode: this.securityCode,
-        });
+        await this.$fn.showMsgResponse(
+            await login({
+                username: this.username,
+                password: encodeURIComponent(this.password),
+                imageCode: this.imageCode,
+                smsCode: this.securityCode
+            })
+        );
     }
 }
 </script>
@@ -142,4 +158,3 @@ export default class Home extends Vue {
     padding-top: 18%;
 }
 </style>
-
