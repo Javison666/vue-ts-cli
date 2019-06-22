@@ -10,7 +10,7 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "iview": "^3.4.1",
-    "jj-browser-fn": "^1.0.20",
+    "jj-browser-fn": "^2.0.2",
     "nprogress": "^0.2.0",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",

@@ -22,6 +22,16 @@
 			"tabs",
 			4
 		],
+		"trailing-comma": [false, {
+			"multiline": {
+				"objects": "ignore",
+				"arrays": "never",
+				"functions": "never",
+				"typeLiterals": "ignore"
+			},
+			"esSpecCompliant": true
+		}],
+		"arrow-parens": false,
 		"interface-name": false,
 		"ordered-imports": false,
 		"object-literal-sort-keys": false,

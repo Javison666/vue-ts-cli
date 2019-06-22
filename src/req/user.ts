@@ -8,7 +8,7 @@ interface LoginData {
 	imageCode: string,
 	smsCode: string
 }
-export const login = async (data: LoginData) => $fn.httpPost({
+export const login = (data: LoginData): any => $fn.httpPost({
 	url: httpApi.user.login,
 	data,
 })
@@ -19,15 +19,22 @@ export const logout = () => $fn.httpPost({
 })
 
 // 获取用户信息
-export const getUserInfo = async () => {
+export const getUserInfo = (): any => {
 	return $fn.httpPost({
 		url: httpApi.user.getInfo,
 	})
 }
 
 // 获取用户信息
-export const getMenu = async () => {
-	return $fn.httpPost({
-		url: httpApi.user.getMenu,
-	})
+export const getMenu = (): any => $fn.httpPost({
+	url: httpApi.user.getMenu,
+})
+
+interface GetId {
+	id: string
 }
+export const getUserInfoDemo = (data: GetId): any => $fn.httpPost({
+	url: httpApi.user.getUserInfo,
+	data
+})
+

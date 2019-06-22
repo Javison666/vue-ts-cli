@@ -25,6 +25,7 @@ router.afterEach((to, from) => {
 router.beforeEach(async (to, from, next) => {
 	NProgress.start();
 	// 权限控制
+	/*
 	if (to.meta && to.meta.auth && to.meta.auth.length > 0) {
 		// tslint:disable-next-line:prefer-const
 		for (let auth of to.meta.auth) {
@@ -48,7 +49,7 @@ router.beforeEach(async (to, from, next) => {
 				}
 			}
 		}
-	}
+	}*/
 	/* 路由发生变化修改页面title */
 	if (to.meta.title) {
 		document.title = to.meta.title;

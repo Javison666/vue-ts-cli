@@ -40,11 +40,11 @@ module.exports = {
         port: 7201,
         proxy: {
             '/api': {
-                target: 'http://127.0.0.1:8082',
+                target: 'http://192.168.103.242:8080',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/api': '/app/mock/16/api',
+                    '^/api': '/app/mock/84',
                 },
             },
         },

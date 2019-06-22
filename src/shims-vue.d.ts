@@ -9,5 +9,6 @@ declare module 'vue/types/vue' {
 		$fn: any,
 		$HTTP_API: any,
 		$PAGE_API: any,
+		$$Message: any,
 	}
 }

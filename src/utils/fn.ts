@@ -35,11 +35,6 @@ const ProjFn = {
     }
 }
 
-// 初始化请求拦截
-ProjFn.setRequestTestFn = (data) => {
-    // 拦截所有请求进行数据处理
-}
-
 export default ProjFn;
 
 

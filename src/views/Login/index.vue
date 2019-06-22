@@ -88,7 +88,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { login } from "@/req/user";
+import { login, getUserInfoDemo } from "@/req/user";
 
 @Component
 export default class Home extends Vue {
@@ -101,6 +101,21 @@ export default class Home extends Vue {
     public securityCode = "";
     public wrong = "";
     public success = "";
+
+    public mounted() {
+       this.getInfo()
+    }
+
+    public async getInfo() {
+        try {
+            const res = await getUserInfoDemo({
+                id: '324'
+            })
+            this.username = res.msg
+        } catch (err) {
+            this.$$Message.error(err)
+        }
+    }
 
     public wrongMsg(txt) {
         this.success = "";

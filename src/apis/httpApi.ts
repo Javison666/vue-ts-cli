@@ -9,5 +9,7 @@ export default {
 		getInfo: `${baseUrl}/user/getUserInfo`,
 		// 获取菜单
 		getMenu: `${baseUrl}/user/getMenu`,
+		// 获取用户信息
+		getUserInfo: `${baseUrl}/getUserInfo`
 	},
 }
