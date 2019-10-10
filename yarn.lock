@@ -4379,17 +4379,17 @@ javascript-stringify@^1.6.0:
   resolved "https://registry.yarnpkg.com/javascript-stringify/-/javascript-stringify-1.6.0.tgz#142d111f3a6e3dae8f4a9afd77d45855b5a9cce3"
   integrity sha1-FC0RHzpuPa6PSpr9d9RYVbWpzOM=
 
-jj-browser-fn@^1.0.20:
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/jj-browser-fn/-/jj-browser-fn-1.0.20.tgz#321f951119d674896dd9dae793cab60effa6aa5b"
-  integrity sha512-eVGm9mZ3kDzZRhpxT0+XcC801O2cyVhMaTEUH5bIu+kC5rWkDp3Dxvh67LEVjzK6xZGa9b2OLFRLkc1uhef8IQ==
+jj-browser-fn@^2.0.2:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/jj-browser-fn/-/jj-browser-fn-2.0.10.tgz#1f766eb506692e574b1cc1436166e87804d9c2d7"
+  integrity sha512-Ht0DNK/ttifLeEFtFDa9WxOGSEDIb2RdDbOQpTQG/+C1Frtzc3RrrQHe8N8LGMBv6PPRnMe6JeZjZ5ROt5zG/Q==
   dependencies:
-    jj-core-fn "^1.0.10"
+    jj-core-fn "^2.0.8"
 
-jj-core-fn@^1.0.10:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/jj-core-fn/-/jj-core-fn-1.0.12.tgz#df9a42de344ee7399df4afa97973e64749d6e2ab"
-  integrity sha512-IJZlYJnSECDi9sC/yJAtWuJfPq6fd0o6bplD+ZRoE6ck3jTs41XYFWoqPxJjgs1EgZPQliCcmNou8dpJMkg88w==
+jj-core-fn@^2.0.8:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/jj-core-fn/-/jj-core-fn-2.0.9.tgz#e7f9d6497106a1922503b1e55c8069b46ced9665"
+  integrity sha512-hzwLm57Cn+WPnIZK4K3KTNve0LG89Jlu9/S83g7IuXXbECkNa4iVqTM9XA4RHZuCBjXspSSzQIvA4VdiX809jg==
 
 joi@^14.3.0:
   version "14.3.1"
