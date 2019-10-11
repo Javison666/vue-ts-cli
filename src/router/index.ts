@@ -2,12 +2,12 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import routes from './router'
 import NProgress from 'nprogress'
-import $fn from '@/utils/fn';
-import PageApi from '@/apis/pageApi'
+// import $fn from '@/utils/fn';
+// import PageApi from '@/apis/pageApi'
 
-import {
-    getUserInfo,
-} from '@/req/user'
+// import {
+//     getUserInfo,
+// } from '@/req/user'
 
 Vue.use(Router);
 

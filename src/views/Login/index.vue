@@ -156,7 +156,7 @@ export default class Home extends Vue {
 </script>
 <style lang="scss" scoped>
 .login-bg {
-    background-image: url("/static/img/bg.jpg");
+    // background-color: #ababab;
     position: fixed;
     left: 0;
     right: 0;
@@ -165,6 +165,21 @@ export default class Home extends Vue {
     background-size: cover;
     background-position: center;
     z-index: -1;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(90deg,#fff,rgba(42,193,255,1));
+    background-position-x: 50%;
+    animation: hue 4s linear infinite;
+}
+@keyframes hue {
+    0% {
+        background-position-x: 20rem;
+    }
+    50% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 20rem;
+    }
 }
 .row {
     margin-bottom: 12px;

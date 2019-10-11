@@ -26,12 +26,7 @@ module.exports = {
     chainWebpack: config => {
         config.resolve.alias
             .set('@', resolve('src')) // key,value自行定义，比如.set('@@', resolve('src/components'))
-            .set('_c', resolve('src/components'))
-            .set('_style', resolve('src/assets/style'))
-            .set('_req', resolve('src/req'))
-            .set('_sc', resolve('src/service/components'))
-            .set('_slib', resolve('src/service/lib'))
-            .set('_utils', resolve('src/utils'))
+            // .set('_c', resolve('src/components'))
     },
     // 打包时不生成.map文件
     // productionSourceMap: false
@@ -40,7 +35,7 @@ module.exports = {
         port: 7201,
         proxy: {
             '/api': {
-                target: 'http://192.168.103.242:8080',
+                target: 'http://192.168.100.206:9080',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
